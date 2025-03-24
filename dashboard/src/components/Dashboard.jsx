@@ -11,6 +11,7 @@ import axios from "axios";
 import Summary from './Summary';
 import { useEffect, useState } from 'react';
 import server from '../environment';
+import frontend from '../environment';
 
 export default function Dashboard() {
   
@@ -58,7 +59,7 @@ export default function Dashboard() {
         }
       }catch(err) {
         localStorage.removeItem('dashboardToken');
-        window.location.href = "http://localhost:5173/login";
+        window.location.href = `${frontend}/login`;
         console.log(err);
       } finally {
         setLoading(false);
