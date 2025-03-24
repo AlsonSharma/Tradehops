@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
-import server from '../environment';
+import {server} from '../environment';
 
 export default function Positions() {
   const [allPositions, setAllPositions] = useState([]);

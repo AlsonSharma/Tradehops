@@ -10,8 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import Summary from './Summary';
 import { useEffect, useState } from 'react';
-import server from '../environment';
-import frontend from '../environment';
+import {server, frontend} from '../environment';
 
 export default function Dashboard() {
   
@@ -21,9 +20,9 @@ export default function Dashboard() {
   useEffect(()=> {
     const verifyToken = async() => {
 
-      // Add debug logs
-    console.log('Current URL:', window.location.href);
-    console.log('URL Search:', window.location.search);
+    //   // Add debug logs
+    // console.log('Current URL:', window.location.href);
+    // console.log('URL Search:', window.location.search);
       
     const params = new URLSearchParams(window.location.search);
 

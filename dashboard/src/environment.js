@@ -9,4 +9,4 @@ const server = IS_PROD
  "https://tourmaline-pie-352391.netlify.app/"
   : "http://localhost:5173";
 
-export default {server, frontend};
+export {server, frontend};

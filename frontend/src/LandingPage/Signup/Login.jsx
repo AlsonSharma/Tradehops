@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import server from '../../environment';
+import { dashboard, server } from '../../environment';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const Login = () => {
 
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
-        window.location.href = `http://localhost:5174/?token=${encodeURIComponent(response.data.token)}`;
+        window.location.href = `${dashboard}/?token=${encodeURIComponent(response.data.token)}`;
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');

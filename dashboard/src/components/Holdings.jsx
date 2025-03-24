@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import axios from "axios";
 import { VerticalGraph } from './VerticalGraph';
-import server from '../environment';
+import {server} from '../environment';
 
 export default function Holdings() {
 

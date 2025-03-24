@@ -6,7 +6,7 @@ import axios from "axios";
 import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
-import server from "../environment";
+import {server} from "../environment";
 
 export default function BuyActionWindow({ uid }) {
 
