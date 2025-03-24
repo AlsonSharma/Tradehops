@@ -30,9 +30,6 @@ createRoot(document.getElementById('root')).render(
     <Route path='*' element={<NotFound/>}/>
   </Routes>
 <Footer/>
-  </BrowserRouter>
-    
-
-   
+  </BrowserRouter> 
 ) 
   

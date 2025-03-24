@@ -54,5 +54,5 @@ app.get("/allOrders", async(req, res) => {
 app.listen(PORT, () => {
   console.log("Server is running on port 3000");
   mongoose.connect(URL);
-  console.log("Connected to DB");
+  console.log("Connected to Database");
 });

@@ -31,7 +31,7 @@ export default function Dashboard() {
      let token = urlToken || localStorage.getItem('dashboardToken');
 
      if (!token || token.trim() === '') {
-     console.log("No token found in URL or localStorage");
+     console.log("No Credentials Found");
       return;
     }
 
@@ -40,7 +40,7 @@ export default function Dashboard() {
       token = decodeURIComponent(urlToken);
     }
 
-    console.log('Final Token:', token);
+    // console.log('Final Token:', token);
 
       try {
         const response = await axios.get(`${server}/verify`, {
