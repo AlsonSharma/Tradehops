@@ -19,7 +19,7 @@ export default function Menu() {
   return (
 
     <div className="menu-container">
-    <img src="./src/Logo.png" style={{ width: "50px" }} />
+    <img src="./Logo.png" style={{ width: "50px" }} />
     <div className="menus">
       <ul>
         <li>
