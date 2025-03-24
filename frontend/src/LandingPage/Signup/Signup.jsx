@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import server from "../../environment";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/signup",
+        `${server}/signup`,
         {
           ...formData,
           createdAt: new Date().toISOString(),

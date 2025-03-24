@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios";
+import server from '../environment';
 
 export default function() {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/allOrders").then((res) => {
+    axios.get(`${server}/allOrders`).then((res) => {
       setAllOrders(res.data);
     })
   }, [])

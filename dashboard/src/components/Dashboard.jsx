@@ -10,6 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import Summary from './Summary';
 import { useEffect, useState } from 'react';
+import server from '../environment';
 
 export default function Dashboard() {
   
@@ -42,7 +43,7 @@ export default function Dashboard() {
     console.log('Final Token:', token);
 
       try {
-        const response = await axios.get('http://localhost:3000/verify', {
+        const response = await axios.get(`${server}/verify`, {
           headers: {Authorization: `Bearer ${token}`}
         });
 

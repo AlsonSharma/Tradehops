@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import server from '../../environment';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:3000/login', formData);
+      const response = await axios.post(`${server}/login`, formData);
 
       console.log(response.data);
       console.log(response.data.success);

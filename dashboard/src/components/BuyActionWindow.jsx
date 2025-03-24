@@ -6,6 +6,7 @@ import axios from "axios";
 import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
+import server from "../environment";
 
 export default function BuyActionWindow({ uid }) {
 
@@ -13,7 +14,7 @@ export default function BuyActionWindow({ uid }) {
     const [stockPrice, setstockPrice] = useState(0.0);
 
     const handleBuyClick = () => {
-        axios.post("http://localhost:3000/newOrder", {
+        axios.post(`${server}/newOrder`, {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
