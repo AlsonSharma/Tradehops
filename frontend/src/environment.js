@@ -5,7 +5,7 @@ const server = IS_PROD
   : "http://localhost:3000";
 
 const dashboard = IS_PROD ? 
- "https://radiant-sable-4e0007.netlify.app"
+ "https://tradehops-2.onrender.com"
   : "http://localhost:5174";
 
 export {server, dashboard};

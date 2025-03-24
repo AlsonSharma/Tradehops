@@ -18,7 +18,7 @@ const URL = process.env.MONGO_URL;
 const app = express();
 
 app.use(cors({
-    origin: ["http://localhost:5173","http://localhost:5174", "https://tradehops-1.onrender.com",  "https://radiant-sable-4e0007.netlify.app"], // Allow only your frontend
+    origin: ["http://localhost:5173","http://localhost:5174", "https://tradehops-1.onrender.com",  "https://tradehops-2.onrender.com"], // Allow only your frontend
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
   }));
